@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Update Runner</h1>
+
+    <!-- Form to update an existing runner -->
+    <form method="POST" action="{{ url_for('runners.update_runner', runner_id=current_runner.runner_id) }}" class="mb-4">
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="first_name" placeholder="First Name" value="{{ current_runner.first_name }}" required>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="last_name" placeholder="Last Name" value="{{ current_runner.last_name }}" required>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Update Runner</button>
+            </div>
+        </div>
+    </form>
+
+    <a href="{{ url_for('runners.runner') }}" class="btn btn-secondary">Back to Runners</a>
+</div>
+
+{% endblock %}

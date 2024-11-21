@@ -1,0 +1,10 @@
+Table runners {
+  runner_id int [pk, increment] // Primary Key, Auto-Increment
+  first_name varchar(45)
+  last_name varchar(45)
+}
+Table samples {
+  sample_id int [pk, increment] // Primary Key, Auto-Increment
+  sample_name varchar(45)
+  sample_size varchar(45)
+}
